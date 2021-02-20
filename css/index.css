@@ -32,6 +32,12 @@ body{
     color: whitesmoke;
 }
 
+.footer .footer-title{
+    position: relative;
+    font-size: 2rem;
+    padding-left: 1.5rem;
+}
+
 @media screen and (max-width: 768px){
     .footer{
         position: absolute;
