@@ -25,18 +25,18 @@ body{
 }
 
 .footer{
-    background-color: #0c4b72;
+    background-color: #233D7B;
 }
 
 .footer > *{
     color: whitesmoke;
 }
 
-.footer .footer-title{
+/*.footer .footer-title{
     position: relative;
     font-size: 2rem;
     padding-left: 1.5rem;
-}
+}*/
 
 @media screen and (max-width: 768px){
     .footer{
