@@ -1,7 +1,7 @@
 
 .form-index{
     position: relative;
-    width: 65.5% !important;   
+    width: 64% !important;
 }
 
 .form-index.card{
@@ -52,7 +52,11 @@
     transition: 115ms;
 }
 
-.btn-form-selection:hover{
+.btn-form-selection:hover:not(.btn-selected){
+    background-color: rgba(110, 160, 247, 0.32);
+}
+
+.btn-selected{
     background-color: #1e5fcf;
     color: #ffffff;
 }

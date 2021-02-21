@@ -26,23 +26,27 @@
                     </div>
                 </div>
                 <div class="col-md full-height-c">
-                    <div class="container pt-4 full-height-c">
+                    <div class="container pt-4 pb-5 full-height-c">
                         <div class="row full-height-c">
                             <div class="col-md">
                                 <div class="container-fluid form-index card">
                                     <div class="card-header">
                                         <div class="btn-group" role="group" aria-label="Basic example">
                                             <button 
-                                                class="btn-form-selection"
+                                                class="btn-form-selection btn-selected btn-alu"
                                                 onclick="
                                                     document.getElementsByClassName('container-alumnos')[0].style.display= 'block';
                                                     document.getElementsByClassName('container-personal')[0].style.display= 'none';
+                                                    this.classList.add('btn-selected');
+                                                    document.getElementsByClassName('btn-per')[0].classList.remove('btn-selected');
                                                 ">Alumnos</button>
                                             <button 
-                                                class="btn-form-selection"
+                                                class="btn-form-selection btn-per"
                                                 onclick="
                                                     document.getElementsByClassName('container-alumnos')[0].style.display= 'none';
                                                     document.getElementsByClassName('container-personal')[0].style.display= 'block';
+                                                    this.classList.add('btn-selected');
+                                                    document.getElementsByClassName('btn-alu')[0].classList.remove('btn-selected');
                                                 ">Personal</button>
                                           </div>
                                     </div>
@@ -75,7 +79,7 @@
                                                     <input class="form-control" type="password" name="contrasena" maxlength="30" placeholder="Contraseña" required />
                                                 </div>
                                                 <div class="alert alert-info" role="alert">
-                                                    <small>Se recomienda usar Mozilla o Internet Explorer.</small>
+                                                    <small>Se recomienda usar Mozilla o Microsoft Edge/IE9.</small>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary" style="background-color:#1e5fcf;">Ingresar</button>
                                             </form>
@@ -93,7 +97,14 @@
         <footer class="container-fluid footer">
             <div class="container pt-4 pb-4">
                 <center>
-                    <img src="res/images/tecnm_blanco.png" alt="Itver" width="224" class="img-fluid"/>
+                    <div class="row footer-row">
+                        <div class="col-sm">
+                            <img src="res/images/tecnm_blanco.png" alt="Itver" width="224" class="img-fluid"/>
+                        </div>
+                        <div class="col-sm">
+                            <img src="res/images/itver.png" alt="Itver" width="132" class="img-fluid"/>
+                        </div>
+                    </div>
                 </center>
             </div>
         </footer>

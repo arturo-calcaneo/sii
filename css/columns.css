@@ -3,26 +3,95 @@
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
 }
 
-.navigation::after{
+.navigation::before{
     display: block;
     position: absolute;
     content: "SII";
     font-size: 12rem;
-    opacity: 0.08;
+    opacity: 0.11;
     margin: 0;
     transform: translateY(-50%)translateX(-50%);
     top: 46.55%;
     left: 12%;
 }
 
-@media screen and (max-width: 1280px){
-    .navigation::after{
-        font-size: 15vw;
+.navigation::after{
+    display: block;
+    position: absolute;
+    content: "Sistema Integral de Información";
+    font-size: 1.61rem;
+    opacity: 0.25;
+    margin: 0;
+    transform: translateY(-50%)translateX(-50%);
+    top: 59%;
+    left: 12.46%;
+}
+
+@media screen and (max-width: 1488px){
+    .navigation::before{
+        font-size: 11.2rem;
+    }
+    .navigation:after{
+        font-size: 1.35rem;
+        top: 60%;
+    }
+}
+
+@media screen and (max-width: 1283px){
+    .navigation::before{
+        font-size: 9.8rem;
+    }
+    .navigation:after{
+        font-size: 1.15rem;
+        top: 58%;
+    }
+}
+
+@media screen and (max-width: 1151px){
+    .navigation::before{
+        font-size: 9rem;
+    }
+    .navigation:after{
+        font-size: 1.02rem;
+        top: 56.55%;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .navigation::before{
+        font-size: 7.8rem;
+    }
+    .navigation:after{
+        font-size: 1rem;
+        top: 55.52%;
+    }
+}
+
+@media screen and (max-width: 928px){
+    .navigation::before{
+        font-size: 7rem;
+    }
+    .navigation:after{
+        font-size: 0.7rem;
+        top: 55.52%;
     }
 }
 
 @media screen and (max-width: 768px){
-    .navigation::after{
+    .navigation::after,
+    .navigation::before{
         content: "";
+    }
+}
+
+@media screen and (max-height: 780px){
+    .navigation:after{
+        top: 62.1%;
+    }
+}
+
+@media screen and (max-height: 614px){
+    .navigation:after{
+        top: 64.25%;
     }
 }
