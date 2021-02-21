@@ -2,3 +2,27 @@
     background-color: #ffffff;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
 }
+
+.navigation::after{
+    display: block;
+    position: absolute;
+    content: "SII";
+    font-size: 12rem;
+    opacity: 0.08;
+    margin: 0;
+    transform: translateY(-50%)translateX(-50%);
+    top: 46.55%;
+    left: 12%;
+}
+
+@media screen and (max-width: 1280px){
+    .navigation::after{
+        font-size: 15vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navigation::after{
+        content: "";
+    }
+}

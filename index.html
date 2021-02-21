@@ -32,14 +32,54 @@
                                 <div class="container-fluid form-index card">
                                     <div class="card-header">
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button>Alumnos</button>
-                                            <button>Personal</button>
+                                            <button 
+                                                class="btn-form-selection"
+                                                onclick="
+                                                    document.getElementsByClassName('container-alumnos')[0].style.display= 'block';
+                                                    document.getElementsByClassName('container-personal')[0].style.display= 'none';
+                                                ">Alumnos</button>
+                                            <button 
+                                                class="btn-form-selection"
+                                                onclick="
+                                                    document.getElementsByClassName('container-alumnos')[0].style.display= 'none';
+                                                    document.getElementsByClassName('container-personal')[0].style.display= 'block';
+                                                ">Personal</button>
                                           </div>
                                     </div>
                                     <div class="card-body">
-                                        <form method="GET">
-                                            
-                                        </form>
+                                        <!-- Formulario de Alumnos  -->
+                                        <div class="container-alumnos" style="display: block;">
+                                            <h3>Acceso de Alumnos</h3>
+                                            <form method="GET">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="usuario" maxlength="10" placeholder="Número de Control" pattern="[A-Za-z]{0,1}[0-9]{8,10}" required autofocus/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="password" name="contrasena" maxlength="10" pattern="[0-9]{1,10}" placeholder="NIP" required />
+                                                </div>
+                                                <div class="alert alert-light" role="alert" style="background-color: rgb(0, 0, 0, 0.04);">
+                                                    <small>Número de Control: Se encuentra disponible en tu gafete escolar.</small> <br/>
+                                                    <small>NIP: Tu número de acceso como estudiante del tec.</small>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary" style="background-color:#1e5fcf;">Ingresar</button>
+                                            </form>
+                                        </div>
+                                        <!-- Formulario de Personal  -->
+                                        <div class="container-personal" style="display: none;">
+                                            <h3>Acceso del Personal</h3>
+                                            <form method="GET">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="usuario" placeholder="Usuario" required/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="password" name="contrasena" maxlength="30" placeholder="Contraseña" required />
+                                                </div>
+                                                <div class="alert alert-info" role="alert">
+                                                    <small>Se recomienda usar Mozilla o Internet Explorer.</small>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary" style="background-color:#1e5fcf;">Ingresar</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
