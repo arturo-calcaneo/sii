@@ -19,7 +19,7 @@ body{
 .white-opacity::before{
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
@@ -28,7 +28,14 @@ body{
     background-color: rgba(255,255,255,0.73);
 }
 
+.overflow-y-scroll-hddn{
+    overflow-y: scroll !important;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .footer{
+    position: relative;
     background-color: #194898;
 }
 
@@ -37,15 +44,28 @@ body{
 }
 
 @media screen and (max-width: 768px){
-    .footer{
-        position: absolute;
+    /*.footer{
+        position: fixed;
         width: 100%;
         height: auto;
         bottom:0;
         left: 0;
+    }*/
+
+    .footer .img1{
+        width: 112px;
+    }
+    .footer .img2{
+        width: 64px;
     }
 }
 
-.footer-row .col-md:first-child{
+.footer-row .col:first-child{
     border-right: 2px solid rgba(255,255,255,0.125);
+}
+
+@media screen and (max-height: 720px){
+    .footer{
+        
+    }
 }
